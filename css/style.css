@@ -1,0 +1,28 @@
+/* ===== style.css ===== */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --primary:#2563eb; --bg:#f7fafc; --card:#fff; --muted:#586069; }
+html,body { height:100%; font-family: Inter, Arial, sans-serif; background:var(--bg); color:#222; }
+.topo { background: linear-gradient(90deg,var(--primary),#00a8e6); color:#fff; padding:28px 16px; text-align:center; }
+.topo h1 { font-size:22px; margin-bottom:6px; }
+.subtitulo { opacity:0.95; margin-bottom:12px; }
+.container { max-width:980px; margin:24px auto; padding:16px; display:flex; flex-direction:column; gap:18px; }
+.card { background:var(--card); border-radius:10px; padding:18px; box-shadow:0 6px 18px rgba(0,0,0,0.06); }
+.grade-modulos { display:grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:10px; }
+.card-link { background:var(--card); border-radius:10px; text-decoration:none; color:var(--primary); padding:16px; display:block; text-align:center; box-shadow:0 6px 14px rgba(0,0,0,0.04); font-weight:700; }
+.card-link small{ display:block; color:var(--muted); font-weight:600; margin-top:6px; }
+.botao { display:inline-block; padding:10px 16px; border-radius:8px; text-decoration:none; color:#fff; background:var(--primary); }
+.botao.primario:hover { filter:brightness(.95); transform:translateY(-2px); transition:all .18s ease;}
+.rodape { text-align:center; padding:18px 10px; color:var(--muted); margin-top:30px; }
+
+/* progress */
+.barra-progresso { background:#e6eefc; border-radius:10px; height:12px; width:90%; max-width:700px; margin:12px auto 0; overflow:hidden; }
+.progress { height:100%; width:0%; background: linear-gradient(90deg,var(--primary),#00c3ff); transition:width .5s ease; }
+
+/* questionario & exemplos */
+.questionario .questao { background:#f8fbff; padding:12px; border-radius:8px; margin-bottom:10px; border-left:4px solid var(--primary); }
+.questao .enunciado { font-weight:700; margin-bottom:8px; }
+label{ display:block; margin:6px 0; cursor:pointer; }
+
+/* helpers */
+.hidden{ display:none; }
+@media (max-width:560px){ .topo h1{ font-size:18px; } .container{ padding:12px; } .grade-modulos{ grid-template-columns: 1fr 1fr; } }

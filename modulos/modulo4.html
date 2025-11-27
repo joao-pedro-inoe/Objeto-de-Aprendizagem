@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 4 - Heurísticas 7 e 8</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/questionario.js" defer></script>
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/navegacao.js" defer></script>
+</head>
+<body>
+    <header class="modulo-topo">
+        <h1>Módulo 4 – Flexibilidade e Eficiência & Design Estético e Minimalista</h1>
+        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+    </header>
+
+    <main class="container">
+
+        <!-- Heurística 7 -->
+        <section class="card">
+            <h2>7. Flexibilidade e eficiência de uso</h2>
+            <p>Usuários experientes devem ter atalhos ou formas rápidas de realizar tarefas.</p>
+
+            <h3>Exemplo interativo</h3>
+            <input type="text" id="campoTexto" placeholder="Digite algo (atalho: SHIFT + ENTER)">
+            <p id="msgAtalho" class="hidden" style="color: green;">Atalho ativado!</p>
+        </section>
+
+        <!-- Heurística 8 -->
+        <section class="card">
+            <h2>8. Design estético e minimalista</h2>
+            <p>Interfaces devem ser simples, claras e sem excesso de informações.</p>
+
+            <h3>Exemplo interativo</h3>
+            <button id="toggleClean" class="botao primario">Alternar Minimalismo</button>
+            <div id="boxBaguncado" class="card">
+                <p>Texto extra</p>
+                <p>Informação irrelevante</p>
+                <p>Elementos demais</p>
+            </div>
+        </section>
+
+        <!-- Questionário -->
+        <section class="card questionario">
+            <h2>Questionário</h2>
+            <div id="container-questionario"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarQuestionario("../questionarios/quest_mod4.json", 4);
+            atualizarBarraProgresso(4);
+        });
+
+        // Exemplo 7 – Atalho
+        const campoTexto = document.getElementById("campoTexto");
+        const msgAtalho = document.getElementById("msgAtalho");
+
+        campoTexto.addEventListener("keydown", (e) => {
+            if (e.shiftKey && e.key === "Enter") {
+                msgAtalho.classList.remove("hidden");
+                setTimeout(() => msgAtalho.classList.add("hidden"), 1500);
+            }
+        });
+
+        // Exemplo 8 – Minimalismo
+        const toggleClean = document.getElementById("toggleClean");
+        const boxBaguncado = document.getElementById("boxBaguncado");
+
+        toggleClean.onclick = () => {
+            boxBaguncado.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>

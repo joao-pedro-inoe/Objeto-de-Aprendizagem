@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 1 - Heurísticas 1 e 2</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/questionario.js" defer></script>
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/navegacao.js" defer></script>
+</head>
+<body>
+    <header class="modulo-topo">
+        <h1>Módulo 1 – Visibilidade do Status & Compatibilidade com o Mundo Real</h1>
+        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+    </header>
+
+    <main class="container">
+
+        <!-- Heurística 1 -->
+        <section class="card">
+            <h2>1. Visibilidade do status do sistema</h2>
+            <p>O sistema deve informar ao usuário o que está acontecendo.</p>
+
+            <h3>Exemplo interativo</h3>
+            <button id="btnLoading" class="botao primario">Simular carregamento</button>
+            <div id="loadingBox" class="loading hidden">Carregando...</div>
+        </section>
+
+        <!-- Heurística 2 -->
+        <section class="card">
+            <h2>2. Compatibilidade com o mundo real</h2>
+            <p>Use símbolos e metáforas que façam sentido para o usuário.</p>
+
+            <h3>Exemplo interativo</h3>
+            <select id="selectIcon">
+                <option value="trash">Lixeira</option>
+                <option value="save">Salvar</option>
+                <option value="cart">Carrinho</option>
+            </select>
+
+            <div id="iconPreview" class="icone-preview">🗑️</div>
+        </section>
+
+        <!-- Questionário -->
+        <section class="card questionario">
+            <h2>Questionário</h2>
+            <div id="container-questionario"></div>
+        </section>
+            <div class="acoes-modulo">
+    </div>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarQuestionario("../questionarios/quest_mod1.json", 1);
+            atualizarBarraProgresso(1);
+        });
+
+        // Exemplo 1
+        const btnLoading = document.getElementById("btnLoading");
+        const loadingBox = document.getElementById("loadingBox");
+
+        btnLoading.onclick = () => {
+            loadingBox.classList.remove("hidden");
+            setTimeout(() => loadingBox.classList.add("hidden"), 2000);
+        };
+
+        // Exemplo 2
+        const selectIcon = document.getElementById("selectIcon");
+        const iconPreview = document.getElementById("iconPreview");
+
+        selectIcon.onchange = () => {
+            const val = selectIcon.value;
+            iconPreview.textContent = val === "trash" ? "🗑️" :
+                                      val === "save" ? "💾" : "🛒";
+        };
+    </script>
+
+
+
+
+</body>
+</html>

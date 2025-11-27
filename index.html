@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Objeto de Aprendizagem — Usabilidade</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topo">
+    <h1>Objeto de Aprendizagem — Heurísticas de Nielsen</h1>
+    <p class="subtitulo">Aprenda usabilidade com exemplos práticos e questionários.</p>
+
+    <div class="barra-progresso" aria-hidden="true">
+      <div id="barraProgresso" class="progress"></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Iniciar módulos</h2>
+      <div class="grade-modulos">
+        <a class="card-link" href="modulos/modulo1.html">Módulo 1<br><small>Heurísticas 1 & 2</small></a>
+        <a class="card-link" href="modulos/modulo2.html">Módulo 2<br><small>Heurísticas 3 & 4</small></a>
+        <a class="card-link" href="modulos/modulo3.html">Módulo 3<br><small>Heurísticas 5 & 6</small></a>
+        <a class="card-link" href="modulos/modulo4.html">Módulo 4<br><small>Heurísticas 7 & 8</small></a>
+        <a class="card-link" href="modulos/modulo5.html">Módulo 5<br><small>Heurísticas 9 & 10</small></a>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Sobre</h2>
+      <p>Este OA apresenta as 10 heurísticas de Nielsen, com exemplos interativos e um questionário por módulo. Ao concluir, veja o relatório.</p>
+      <a class="botao primario" href="relatorio/relatorio.html">Ver Relatório</a>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Objeto de Aprendizagem — 2025</p>
+  </footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/navegacao.js"></script>
+  <script>
+    // inicializa barra de progresso no index
+    document.addEventListener("DOMContentLoaded", () => {
+      atualizarProgresso(); // função em storage.js
+    });
+  </script>
+</body>
+</html>

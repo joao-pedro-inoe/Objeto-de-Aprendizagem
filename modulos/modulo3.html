@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 3 - Heurísticas 5 e 6</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/questionario.js" defer></script>
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/navegacao.js" defer></script>
+</head>
+<body>
+    <header class="modulo-topo">
+        <h1>Módulo 3 – Prevenção de Erros & Reconhecimento em Vez de Memorização</h1>
+        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+    </header>
+
+    <main class="container">
+
+        <!-- Heurística 5 -->
+        <section class="card">
+            <h2>5. Prevenção de erros</h2>
+            <p>O sistema deve evitar que erros aconteçam, oferecendo restrições e validações antes da ação do usuário.</p>
+
+            <h3>Exemplo interativo</h3>
+            <input type="number" id="numeroInput" placeholder="Digite um número entre 1 e 10">
+            <p id="erroMsg" class="hidden" style="color:red; font-weight: bold;">Valor fora do intervalo permitido!</p>
+        </section>
+
+        <!-- Heurística 6 -->
+        <section class="card">
+            <h2>6. Reconhecimento em vez de memorização</h2>
+            <p>O usuário deve ver opções claras sem precisar lembrar comandos ou informações anteriores.</p>
+
+            <h3>Exemplo interativo</h3>
+            <div id="menu" class="card">
+                <button class="botao primario">Perfil</button>
+                <button class="botao primario">Configurações</button>
+                <button class="botao primario">Ajuda</button>
+            </div>
+        </section>
+
+        <!-- Questionário -->
+        <section class="card questionario">
+            <h2>Questionário</h2>
+            <div id="container-questionario"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarQuestionario("../questionarios/quest_mod3.json", 3);
+            atualizarBarraProgresso(3);
+        });
+
+        // Exemplo 5 – Prevenção de erros
+        const numeroInput = document.getElementById("numeroInput");
+        const erroMsg = document.getElementById("erroMsg");
+
+        numeroInput.oninput = () => {
+            const val = Number(numeroInput.value);
+            if (val < 1 || val > 10) {
+                erroMsg.classList.remove("hidden");
+            } else {
+                erroMsg.classList.add("hidden");
+            }
+        };
+    </script>
+</body>
+</html>

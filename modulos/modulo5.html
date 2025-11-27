@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 5 - Heurísticas 9 e 10</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/questionario.js" defer></script>
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/navegacao.js" defer></script>
+</head>
+<body>
+    <header class="modulo-topo">
+        <h1>Módulo 5 – Recuperação de Erros & Ajuda / Documentação</h1>
+        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+    </header>
+
+    <main class="container">
+
+        <!-- Heurística 9 -->
+        <section class="card">
+            <h2>9. Ajudar usuários a reconhecer e recuperar erros</h2>
+            <p>Erros devem ser claros e indicar como corrigi-los.</p>
+
+            <h3>Exemplo interativo</h3>
+            <input type="text" id="emailInput" placeholder="Digite seu e-mail">
+            <p id="emailErro" class="hidden" style="color:red;">Formato inválido! Ex: nome@dominio.com</p>
+        </section>
+
+        <!-- Heurística 10 -->
+        <section class="card">
+            <h2>10. Ajuda e documentação</h2>
+            <p>A documentação deve estar disponível e acessível.</p>
+
+            <h3>Exemplo interativo</h3>
+            <button id="btnAjuda" class="botao primario">Abrir ajuda</button>
+            <div id="helpBox" class="card hidden">
+                <p>Este é um exemplo de área de ajuda simples.</p>
+            </div>
+        </section>
+
+        <!-- Questionário -->
+        <section class="card questionario">
+            <h2>Questionário</h2>
+            <div id="container-questionario"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarQuestionario("../questionarios/quest_mod5.json", 5);
+            atualizarBarraProgresso(5);
+        });
+
+        // Exemplo 9 – Erro com explicação
+        const emailInput = document.getElementById("emailInput");
+        const emailErro = document.getElementById("emailErro");
+
+        emailInput.oninput = () => {
+            const valido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value);
+            if (!valido) emailErro.classList.remove("hidden");
+            else emailErro.classList.add("hidden");
+        };
+
+        // Exemplo 10 – Ajuda
+        const helpBox = document.getElementById("helpBox");
+        document.getElementById("btnAjuda").onclick = () => {
+            helpBox.classList.toggle("hidden");
+        };
+    </script>
+</body>
+</html>

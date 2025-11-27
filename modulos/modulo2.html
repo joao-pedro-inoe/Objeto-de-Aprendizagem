@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Módulo 2 - Heurísticas 3 e 4</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/questionario.js" defer></script>
+    <script src="../js/storage.js" defer></script>
+    <script src="../js/navegacao.js" defer></script>
+</head>
+<body>
+    <header class="modulo-topo">
+        <h1>Módulo 2 – Controle e Liberdade & Consistência e Padrões</h1>
+        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+    </header>
+
+    <main class="container">
+
+        <!-- Heurística 3 -->
+        <section class="card">
+            <h2>3. Controle e liberdade do usuário</h2>
+            <p>Permita desfazer ações rapidamente.</p>
+
+            <h3>Exemplo interativo</h3>
+            <button id="addItem" class="botao primario">Adicionar item</button>
+            <button id="undo" class="botao">Desfazer</button>
+            <ul id="lista"></ul>
+        </section>
+
+        <!-- Heurística 4 -->
+        <section class="card">
+            <h2>4. Consistência e padrões</h2>
+            <p>Mantenha elementos funcionando de forma padronizada.</p>
+
+            <h3>Exemplo interativo</h3>
+            <button id="btnOk" class="botao primario">OK (Azul)</button>
+            <button id="btnOk2" class="botao primario">OK (Deveria ser azul)</button>
+        </section>
+
+        <!-- Questionário -->
+        <section class="card questionario">
+            <h2>Questionário</h2>
+            <div id="container-questionario"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            carregarQuestionario("../questionarios/quest_mod2.json", 2);
+            atualizarBarraProgresso(2);
+        });
+
+        // Exemplo 3 - Undo
+        const lista = document.getElementById("lista");
+        const undo = document.getElementById("undo");
+        const addItem = document.getElementById("addItem");
+        let stack = [];
+
+        addItem.onclick = () => {
+            const item = document.createElement("li");
+            item.textContent = "Item adicionado";
+            lista.appendChild(item);
+            stack.push(item);
+        };
+
+        undo.onclick = () => {
+            if (stack.length) {
+                const last = stack.pop();
+                last.remove();
+            }
+        };
+
+        // Exemplo 4 - Consistência
+        document.getElementById("btnOk2").style.background = "red"; // exemplo errado
+    </script>
+</body>
+</html>
