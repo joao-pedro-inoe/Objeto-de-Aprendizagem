@@ -1,14 +1,44 @@
 {
   "perguntas": [
     {
-      "enunciado": "enunciado do mod 1:",
+      "enunciado": "Qual é o principal objetivo da heurística 9 de Nielsen?",
       "alternativas": [
-        "teste",
-        "teste",
-        "teste",
-        "teste"
+        "Oferecer atalhos para usuários experientes.",
+        "Permitir personalização completa da interface.",
+        "Ajudar o usuário a reconhecer, diagnosticar e recuperar erros.",
+        "Adicionar mensagens visuais chamativas sempre que um erro ocorrer."
+      ],
+      "correta": 2
+    },
+    {
+      "enunciado": "Qual exemplo representa corretamente a aplicação da heurística 9?",
+      "alternativas": [
+        "Exibir um código de erro complexo, sem explicação clara.",
+        "Apresentar uma mensagem simples explicando o erro e dizendo o que fazer para corrigi-lo.",
+        "Não exibir mensagens de erro para evitar confusão.",
+        "Mostrar notificações longas e detalhadas com termos técnicos."
       ],
       "correta": 1
+    },
+    {
+      "enunciado": "Segundo a heurística 10, a documentação deve:",
+      "alternativas": [
+        "Ser extensa, técnica e completa para cobrir todos os cenários possíveis.",
+        "Ser escondida para não poluir a interface.",
+        "Ser acessível, clara e ajudar o usuário exatamente quando ele precisar.",
+        "Substituir totalmente a necessidade de uma interface intuitiva."
+      ],
+      "correta": 2
+    },
+    {
+      "enunciado": "Qual situação viola a heurística 10?",
+      "alternativas": [
+        "Um sistema que oferece dicas de preenchimento dentro dos próprios campos.",
+        "Uma página com botão de ajuda visível e de fácil acesso.",
+        "Um tutorial curto contextualizado à tarefa do usuário.",
+        "Uma área de ajuda difícil de encontrar e escrita em linguagem técnica."
+      ],
+      "correta": 3
     }
   ]
 }

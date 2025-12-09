@@ -1,14 +1,44 @@
 {
   "perguntas": [
     {
-      "enunciado": "enunciado do mod 1:",
+      "enunciado": "A heurística de 'controle e liberdade do usuário' enfatiza principalmente:",
       "alternativas": [
-        "teste",
-        "teste",
-        "teste",
-        "teste"
+        "Oferecer atalhos para usuários experientes",
+        "Permitir desfazer e cancelar ações facilmente",
+        "Reduzir o número de elementos visuais da interface",
+        "Padronizar os componentes ao longo do sistema"
       ],
       "correta": 1
+    },
+    {
+      "enunciado": "Qual situação melhor representa uma violação da heurística de 'consistência e padrões'?",
+      "alternativas": [
+        "Um botão azul que, em outra tela, aparece inesperadamente vermelho",
+        "A interface permitir desfazer uma ação recente",
+        "Uma mensagem de erro clara e específica",
+        "Um formulário com validação automática"
+      ],
+      "correta": 0
+    },
+    {
+      "enunciado": "Por que oferecer mecanismos de desfazer ações é importante para a experiência do usuário?",
+      "alternativas": [
+        "Porque ajuda a prever o comportamento do sistema",
+        "Porque reduz o medo de cometer erros e incentiva exploração",
+        "Porque melhora a estética da interface",
+        "Porque deixa o sistema mais rápido"
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "A consistência na interface contribui principalmente para:",
+      "alternativas": [
+        "Reduzir a necessidade de memorização do usuário",
+        "Aumentar a complexidade do sistema",
+        "Permitir retornos rápidos de ações indesejadas",
+        "Criar padrões visuais aleatórios"
+      ],
+      "correta": 0
     }
   ]
 }

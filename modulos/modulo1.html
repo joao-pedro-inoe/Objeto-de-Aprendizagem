@@ -11,7 +11,8 @@
 <body>
     <header class="modulo-topo">
         <h1>Módulo 1 – Visibilidade do Status & Compatibilidade com o Mundo Real</h1>
-        <div id="progresso-barra" class="progress-bar"><div class="progress"></div></div>
+        <div id="progresso-barra" class="progress-bar barra-progresso"><div class="progress"></div></div>
+
     </header>
 
     <main class="container">
@@ -19,7 +20,9 @@
         <!-- Heurística 1 -->
         <section class="card">
             <h2>1. Visibilidade do status do sistema</h2>
-            <p>O sistema deve informar ao usuário o que está acontecendo.</p>
+            <p>
+                A primeira heurística de Nielsen, conhecida como Visibilidade do status do sistema, estabelece que uma interface deve sempre manter o usuário informado sobre o que está acontecendo. Isso significa que o sistema precisa fornecer feedback claro, imediato e compreensível após cada ação realizada. Quando o usuário clica em um botão, envia um formulário, faz login ou inicia um carregamento, ele espera algum tipo de resposta visual, auditiva ou textual que indique que o sistema recebeu sua ação e está processando algo. Esse retorno reduz dúvidas, ansiedade e a sensação de que algo pode ter dado errado. Elementos como barras de progresso, mensagens de confirmação, animações de carregamento, indicadores de atividade e mudanças visuais no estado de botões ajudam a construir essa sensação de transparência. Quando a visibilidade do status é bem aplicada, o usuário se sente mais seguro, entende em que etapa está e percebe que o sistema está funcionando de forma previsível. Por outro lado, quando o sistema não fornece feedback adequado, o usuário pode achar que sua ação não foi registrada, repetir comandos desnecessariamente ou até abandonar a tarefa. Assim, garantir que o sistema comunique seu estado em tempo real é fundamental para criar experiências mais intuitivas e confiáveis.
+            </p>
 
             <h3>Exemplo interativo</h3>
             <button id="btnLoading" class="botao primario">Simular carregamento</button>
@@ -29,7 +32,9 @@
         <!-- Heurística 2 -->
         <section class="card">
             <h2>2. Compatibilidade com o mundo real</h2>
-            <p>Use símbolos e metáforas que façam sentido para o usuário.</p>
+            <p>
+                A segunda heurística de Nielsen, chamada Correspondência entre o sistema e o mundo real, afirma que as interfaces devem se comunicar usando a linguagem, os conceitos e as convenções que fazem sentido para o usuário no seu cotidiano. Isso significa que o sistema não deve exigir que a pessoa aprenda termos técnicos, estruturas internas de funcionamento ou lógicas complexas para conseguir realizar tarefas. Em vez disso, deve apresentar informações de forma natural, seguindo modelos mentais que as pessoas já conhecem. Ícones, metáforas visuais e nomes familiares — como a lixeira para excluir arquivos, a pasta para organizar documentos ou o disquete como símbolo de salvar — ajudam o usuário a interpretar rapidamente o significado dos elementos. Da mesma forma, a ordem das informações deve seguir um fluxo lógico e intuitivo, refletindo como as pessoas pensam e organizam o mundo. Quando o sistema se afasta dessa correspondência, ele se torna confuso, obriga o usuário a fazer esforço mental extra e aumenta a chance de erros. Já quando respeita essa heurística, a interação se torna mais fluida, natural e eficiente, pois o usuário sente que compreende o sistema sem precisar decifrá-lo.
+            </p>
 
             <h3>Exemplo interativo</h3>
             <select id="selectIcon">

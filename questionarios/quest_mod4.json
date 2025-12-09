@@ -1,12 +1,42 @@
 {
   "perguntas": [
     {
-      "enunciado": "enunciado do mod 1:",
+      "enunciado": "A heurística de Flexibilidade e Eficiência de Uso afirma que:",
       "alternativas": [
-        "teste",
-        "teste",
-        "teste",
-        "teste"
+        "A interface deve evitar qualquer tipo de atalho, pois confunde usuários iniciantes.",
+        "Usuários experientes devem ter meios mais rápidos de realizar tarefas, como atalhos ou personalização.",
+        "Todos os usuários devem seguir o mesmo fluxo rígido de ações para evitar erros.",
+        "O sistema deve ocultar funções avançadas para manter a interface simples."
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "Qual dos exemplos abaixo representa corretamente a aplicação da heurística 7?",
+      "alternativas": [
+        "Um sistema que remove botões para deixar tudo mais limpo.",
+        "Uma interface que oferece somente um caminho possível para cada tarefa.",
+        "Um editor de texto que inclui atalhos de teclado para ações frequentes.",
+        "Uma página que utiliza cores fortes e muitos elementos gráficos."
+      ],
+      "correta": 2
+    },
+    {
+      "enunciado": "O principal objetivo do Design Estético e Minimalista é:",
+      "alternativas": [
+        "Adicionar elementos visuais para deixar a interface mais chamativa.",
+        "Remover funcionalidades avançadas para simplificar o sistema.",
+        "Manter apenas informações essenciais, reduzindo distrações e excesso de elementos.",
+        "Criar telas longas e detalhadas para explicar tudo ao usuário."
+      ],
+      "correta": 2
+    },
+    {
+      "enunciado": "Qual cenário demonstra violação da heurística 8?",
+      "alternativas": [
+        "Uma tela limpa que mostra apenas o necessário para completar a tarefa.",
+        "Uma página cheia de botões, anúncios e textos que dificultam encontrar o conteúdo principal.",
+        "Um sistema que usa espaçamento adequado entre elementos.",
+        "Uma interface que organiza a informação em blocos claros e hierárquicos."
       ],
       "correta": 1
     }

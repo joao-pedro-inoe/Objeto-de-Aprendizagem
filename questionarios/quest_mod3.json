@@ -1,14 +1,44 @@
 {
   "perguntas": [
     {
-      "enunciado": "enunciado do mod 1:",
+      "enunciado": "Qual é o foco principal da heurística de Prevenção de Erros?",
       "alternativas": [
-        "teste",
-        "teste",
-        "teste",
-        "teste"
+        "Corrigir erros apenas depois que acontecem",
+        "Evitar que erros aconteçam antes mesmo da ação do usuário",
+        "Permitir que o usuário experimente livremente sem restrições",
+        "Ignorar erros para manter a interface simples"
       ],
       "correta": 1
+    },
+    {
+      "enunciado": "Qual das opções abaixo é um exemplo claro de prevenção de erros?",
+      "alternativas": [
+        "Mostrar uma mensagem de erro longa após o usuário inserir um dado inválido",
+        "Permitir que o usuário envie um formulário mesmo com campos obrigatórios vazios",
+        "Desabilitar o botão de envio até que todos os campos obrigatórios estejam preenchidos",
+        "Aceitar qualquer valor digitado e corrigir automaticamente sem avisar"
+      ],
+      "correta": 2
+    },
+    {
+      "enunciado": "A heurística 'Reconhecimento em vez de Memorização' busca:",
+      "alternativas": [
+        "Fazer o usuário memorizar informações importantes para melhorar sua autonomia",
+        "Reduzir a necessidade de lembrar informações oferecendo elementos visuais e acessíveis",
+        "Substituir menus por comandos de texto",
+        "Aumentar a quantidade de informações na tela para facilitar a memorização"
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "Qual situação representa corretamente o princípio de reconhecimento?",
+      "alternativas": [
+        "Exigir que o usuário decore um código para acessar uma função",
+        "Mostrar apenas comandos avançados, sem explicações",
+        "Oferecer menus claros com opções visíveis e ícones familiares",
+        "Remover dicas visuais para reduzir distrações"
+      ],
+      "correta": 2
     }
   ]
 }

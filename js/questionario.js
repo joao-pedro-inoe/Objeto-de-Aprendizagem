@@ -79,21 +79,30 @@ function corrigirQuestionario(perguntas, modulo) {
   if (typeof window.salvarResultado === 'function') {
     window.salvarResultado(modulo, acertos, total);
   } else {
-    // fallback
     localStorage.setItem(`resultado_mod${modulo}`, JSON.stringify({acertos,total}));
   }
 
-  // opcional: limpar respostas temporárias
+  // remove respostas temporárias
   localStorage.removeItem(`respostas_mod${modulo}`);
 
-  // feedback e finalizar (finalizarModulo está em storage.js)
+  // --- NOVO: Atualiza a barra ANTES de mudar de página ---
+  if (typeof window.atualizarProgresso === 'function') {
+    window.atualizarProgresso();
+  }
+
   alert(`Você acertou ${acertos} de ${total} questões.`);
+
+  // finalizar (redireciona)
   if (typeof window.finalizarModulo === 'function') {
-    window.finalizarModulo(modulo);
+    // pequeno atraso para permitir que a barra atualize visualmente
+    setTimeout(() => {
+      window.finalizarModulo(modulo);
+    }, 300);
   } else {
     window.location.href = '../index.html';
   }
 }
+
 
 /* expor funções globais */
 window.carregarQuestionario = carregarQuestionario;

@@ -1,12 +1,42 @@
 {
   "perguntas": [
     {
-      "enunciado": "enunciado do mod 1:",
+      "enunciado": "De acordo com a heurística de Visibilidade do Status do Sistema, o que uma interface deve sempre garantir?",
       "alternativas": [
-        "teste",
-        "teste",
-        "teste",
-        "teste"
+        "Que o usuário memorize comandos complexos.",
+        "Que o sistema forneça feedback claro e imediato sobre suas ações.",
+        "Que todas as ações exijam múltiplas confirmações.",
+        "Que o usuário dependa de documentação para entender o sistema."
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "Qual é o principal objetivo da heurística de Correspondência entre o Sistema e o Mundo Real?",
+      "alternativas": [
+        "Fazer o usuário aprender termos técnicos do sistema.",
+        "Usar metáforas e linguagem familiar ao usuário.",
+        "Aumentar a quantidade de elementos visuais na interface.",
+        "Manter a interface complexa para usuários avançados."
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "Um exemplo de boa aplicação da visibilidade do status é:",
+      "alternativas": [
+        "Não mostrar nada enquanto um arquivo é carregado.",
+        "Mostrar uma barra de progresso durante uma ação demorada.",
+        "Obrigar o usuário a atualizar a página para ver mudanças.",
+        "Esconder mensagens de erro para evitar distrações."
+      ],
+      "correta": 1
+    },
+    {
+      "enunciado": "Qual exemplo representa corretamente a heurística de correspondência com o mundo real?",
+      "alternativas": [
+        "Usar siglas internas da equipe de desenvolvimento na interface.",
+        "Utilizar uma lixeira como símbolo para excluir arquivos.",
+        "Criar ícones abstratos sem significado claro.",
+        "Exigir que o usuário memorize comandos para navegar."
       ],
       "correta": 1
     }
