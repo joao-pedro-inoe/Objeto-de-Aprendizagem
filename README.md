@@ -30,3 +30,11 @@ O OA utiliza uma metodologia de **Aprendizagem Baseada em Erros**, onde o aluno 
 ### Plano de aula
 
 [Plano de Aula](./plano.md)
+
+### Como usar o objeto:
+
+1-Clone o repositório
+2-Raíz do projeto execute:  
+python3 -m http.server 8000 
+3-Abra seu navegador e acesse:
+http://localhost:8000/
